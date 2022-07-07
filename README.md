@@ -1,37 +1,34 @@
 # UCloudTeach-MicroService
 
-#### 介绍
-优云教在线教育平台微服务架构版本，使用SpringBoot+Dubbo搭建，该版本基于服务的拆分基本实现，本项目对于单体到微服务架构改造有一定的学习借鉴作用。此版架构优点是服务边界明确、各服务可独立运行、单服务维护成本较低，缺点是构建难度较大需要有相关经验。 前端项目/单体项目地址请关注Readme文件。
+### 项目介绍
+#### 1、项目说明
+优云教是一个服务于学生、教师的在线教育平台，主要定位于学校自有教学平台的建设，提供线上教学全流程的解决方案，平台的最大特点是将日常的教学任务进行整合，将课程、练习、考试等功能集为一体，不管是教师还是学生只需要登录平台进行相关操作即可，教师可在平台上对学生的学习情况进行跟踪，提高教学质量，也实现了教学资源的统一管理，在一定程度上减少了用户的时间成本。优云教致力于解决学校在线教育自有平台缺失或者功能不完善等痛点问题，满足学校多功能教学平台定制化开发的需求，减轻自有平台构建压力，助力平台快速上线。本项目为微服务架构版本，使用 **SpringBoot+Dubbo** 搭建，已完成基于服务的拆分。
 
-#### 软件架构
-软件架构说明
+#### 2、功能介绍
+![项目功能介绍图](img/function.png)
+![功能流程](img/flow.png)
 
+#### 3、亮点与优势
 
-#### 安装教程
+① 平台学生端提供高定制化能力，可适应不同教学环境中教学任务的开展；
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+② 学习周期经过课程、考试、证书发放等形成闭环，教师可关注学生各环节学习情况，及时有效介入，提高教学质量，丰富教学成果；
 
-#### 使用说明
+③ 管理员在平台可上传大体积教学视频，提供分片上传与极速秒传功能；
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+④ 答题过程中可通过滑动切换题目，提供倒计时功能，有效提升用户体验；
 
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+⑤ 试题提供异步自动批阅功能，一定程度上减轻了教师的教学负担；
 
 
-#### 特技
+#### 项目架构
+![平台架构](img/instruction.png)
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+![微服务架构](img/microserviceinstruction.png)
+
+### 仓库说明
+单体架构仓库地址为：[UCloudTeach-Monolithic](https://gitee.com/h0ss/ucloud-teach-monolithic)
+
+前端-管理端使用Vue3+Ant-Design-Vue搭建，仓库地址为：[UCloudTeach-Admin](http://gitee.com/h0ss/ucloud-teach-admin)；
+
+前端-学生端使用Vue3+Vant3搭建，仓库地址为：[UCloudTeach-Student](https://gitee.com/h0ss/ucloud-teach-student)；
