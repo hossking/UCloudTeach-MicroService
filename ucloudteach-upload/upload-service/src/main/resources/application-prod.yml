@@ -1,0 +1,2 @@
+server:
+  port: ${ucloudteach.upload.port}

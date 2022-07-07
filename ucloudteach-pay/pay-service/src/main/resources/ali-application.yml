@@ -1,0 +1,10 @@
+appId: 123
+# 前往支付宝沙箱申请
+privateKey: 123
+publicKey: 123
+notifyUrl: http://127.0.0.1/api/common/pay/notify
+returnUrl: http://127.0.0.1/pay/status
+signType: RSA2
+charset: UTF-8
+gatewayUrl: https://openapi.alipaydev.com/gateway.do
+logPath: ./log

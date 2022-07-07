@@ -1,0 +1,17 @@
+server:
+  port: ${ucloudteach.pay.web.port}
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1/ucloud?useSSL=false&allowMultiQueries=true
+    username: test
+    password: mysql
+    driver-class-name: com.mysql.cj.jdbc.Driver
+# dubbo 配置
+dubbo:
+  application:
+    name: ucloudteach-pay-web
+  registry:
+    protocol: ${ucloudteach.dubbo.registry.protocol}
+    address: ${ucloudteach.dubbo.registry.address}
+  monitor:
+    protocol: registry

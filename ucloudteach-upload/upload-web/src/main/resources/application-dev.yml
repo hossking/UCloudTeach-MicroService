@@ -1,0 +1,76 @@
+server:
+  port: ${ucloudteach.upload.web.port}
+# dubbo 配置
+dubbo:
+  application:
+    name: ucloudteach-upload-web
+  registry:
+    protocol: ${ucloudteach.dubbo.registry.protocol}
+    address: ${ucloudteach.dubbo.registry.address}
+  monitor:
+    protocol: registry
+spring:
+  servlet:
+    # 文件上传配置
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+  datasource:
+    url: jdbc:mysql://127.0.0.1/ucloud?useSSL=false&allowMultiQueries=true
+    username: test
+    password: mysql
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # redis 配置
+  redis:
+    # Redis数据库索引这里由于不使用其他缓存功能 将其置于token同库
+    database: 2
+    # Redis服务器地址
+    host: 127.0.0.1
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码（默认为空）
+    password: 123
+    # 连接超时时间
+    timeout: 10s
+    lettuce:
+      pool:
+        # 连接池最大连接数
+        max-active: 200
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1ms
+        # 连接池中的最大空闲连接
+        max-idle: 10
+        # 连接池中的最小空闲连接
+        min-idle: 0
+sa-token:
+  # token有效期，单位s 默认30天, -1代表永不过期
+  timeout: 25200
+  # token临时有效期 (指定时间内无操作就视为token过期) 单位: 秒
+  activity-timeout: 600
+  # 是否允许同一账号并发登录 (为true时允许一起登录, 为false时新登录挤掉旧登录)
+  is-concurrent: false
+  # 在多人登录同一账号时，是否共用一个token (为true时所有登录共用一个token, 为false时每次登录新建一个token)
+  is-share: false
+  # token风格
+  token-style: random-64
+  # 是否输出操作日志
+  is-log: false
+  # 配置 Sa-Token 单独使用的 Redis 连接
+  alone-redis:
+    # Redis数据库索引（默认为0）
+    database: 2
+    # Redis服务器地址
+    host: 127.0.0.1
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码（默认为空）
+    password: 123
+    # 连接超时时间
+    timeout: 10s
+# 前往华为云obs申请
+obs:
+  ak: 123
+  sk: 123
+  endPoint: obs.cn-north-4.myhuaweicloud.com
+  socketTimeout: 30000
+  connectionTimeout: 10000
